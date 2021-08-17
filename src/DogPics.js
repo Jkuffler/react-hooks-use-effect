@@ -13,7 +13,7 @@ function DogPics() {
         console.log("setState");
         setImages(data.message);
       });
-  });
+  }, []);
 
   console.log("render");
 
@@ -27,3 +27,10 @@ function DogPics() {
 }
 
 export default DogPics;
+
+
+fetchD("URL")
+.then ((r)=> r.json())
+.then((data) => {
+  setImages(data.messages)
+})
